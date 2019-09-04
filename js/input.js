@@ -37,7 +37,7 @@ export default class Input {
         if (key.key == "Down" || key.key == "ArrowDown" || key.code == "KeyS") {
             this.down = true;
         }
-        if(key.charCode == " " || key.code == "32" || key.code == "Space"){
+        if(key.code == "32" || key.code == "Space"){
             this.spacebar = true;
         }
         if (key.key == "Escape" || key.key == "Esc" || key.code == "27") {
@@ -63,7 +63,7 @@ export default class Input {
         if (key.key == "Down" || key.key == "ArrowDown" || key.code == "KeyS") {
             this.down = false;
         }
-        if(key.charCode == " " || key.code == "32" || key.code == "Space"){
+        if(key.code == "32" || key.code == "Space"){
             this.spacebar = false;
         }
         if (key.key == "Escape" || key.key == "Esc" || key.code == "27") {
