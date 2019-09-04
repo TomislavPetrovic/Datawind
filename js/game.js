@@ -5,7 +5,7 @@ import Enemy from '/js/enemy.js';
 import Input from '/js/input.js';
 import Bullet from '/js/bullet.js';
 import Background from '/js/background.js';
-import Sound from '/js/Sound.js';
+import Sound from '/js/sound.js';
 
 export default class Game {
 
@@ -249,9 +249,9 @@ export default class Game {
             }
 
             //opcija 2
-            if (this.checkRectClick(this.menuX + 25, this.menuY + 260, this.menuWidth - 50, 50) && this.paused) {
+            if (this.checkRectClick(this.menuX + 25, this.menuY + 260, this.menuWidth - 50, 50) && !this.running) {
                 //povratak na stranicu sa projektima
-                window.location.href = "https://tomislavpetrovic.github.io/";
+                window.location.href = "http://www.tomislavpetrovic.github.io/";
                 this.sound.playMenuAction();
             }
 
@@ -358,7 +358,7 @@ export default class Game {
     checkBullets() {
         this.checkPlayerBullets();
         if (!this.recovery) {
-            //this.checkEnemyBullets();
+            this.checkEnemyBullets();
         }
     }
 
